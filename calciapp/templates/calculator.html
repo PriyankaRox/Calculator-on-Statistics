@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+<section class="w3l-aboutblock1 py-5" id="about" xmlns="http://www.w3.org/1999/html">
+    <div class="container py-lg-5 py-md-4 py-2">
+        <div class="row">
+            <div class="col-lg-12 align-self">
+                <h3 class="title-big mx-0">Calculator</h3>
+                <div class="col-12">
+                    <form  action="result">
+                        <p class="mt-lg-4 mt-3">Enter numbers</br>
+                        <input type="number" id="num1" name="num1" min="1" maxlength="4" size="4" >
+                        <input type="number" id="num2" name="num2" min="1"  maxlength="4" size="4">
+                        <input type="number" id="num3" name="num3" min="1"  maxlength="4" size="4">
+                        <input type="number" id="num4" name="num4" min="1"  maxlength="4" size="4">
+                        <input type="number" id="num5" name="num5" min="1" maxlength="4" size="4" >
+                        <input type="number" id="num6" name="num6" min="1"  maxlength="4" size="4">
+                        <input type="number" id="num7" name="num7" min="1" maxlength="4" size="4" >
+                        <input type="number" id="num8" name="num8" min="1" maxlength="4" size="4" >
+                        <input type="number" id="num9" name="num9" min="1"  ></p>
+                        <input type="submit" style="font-family:bold; background-color:pink" name="submit" class="mt-3 mb-lg-5"/>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-6 left-wthree-img mt-lg-0 mt-sm-5 mt-4">
+                <img src="assets/images/about.jpg" alt="" class="img-fluid radius-image">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

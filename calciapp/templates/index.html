@@ -1,0 +1,332 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Calculator</title>
+
+    <!-- google fonts -->
+    <link href="//fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style-starter.css' %}">
+    
+  </head>
+  <body>
+<!--header-->
+<header id="site-header" class="fixed-top">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark stroke">
+      <h1>
+        <a class="navbar-brand" href="index.html">
+          <span class="fa fa-diamond"></span>Welcome <span class="logo"></span></a>
+      </h1>
+      <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+        data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+        <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+        </span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mx-lg-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item @@about__active">
+            <a class="nav-link" href="{% url 'calculator' %}">Calculator</a>
+          </li>
+          <li class="nav-item @@contact__active">
+            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+          </li>
+        </ul>
+
+        <!--/search-right-->
+
+        <div class="top-quote mr-lg-2 text-center">
+            <span><b>Hello, {{request.user}}</b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+          <a href="{% url 'logout' %}" class="btn login mr-2"><span class="fa fa-user"></span> logout</a>
+        </div>
+      </div>
+      <!-- toggle switch for light and dark theme -->
+      <div class="mobile-position">
+        <nav class="navigation">
+          <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox">
+              <div class="mode-container py-1">
+                <i class="gg-sun"></i>
+                <i class="gg-moon"></i>
+              </div>
+            </label>
+          </div>
+        </nav>
+      </div>
+      <!-- //toggle switch for light and dark theme -->
+    </nav>
+  </div>
+</header>
+<!--/header-->
+<!-- main-slider -->
+<section class="w3l-main-slider" id="home">
+    <div class="companies20-content">
+        <div class="owl-one owl-carousel owl-theme">
+            <div class="item">
+                <li>
+                    <div class="slider-info  banner-view banner-top1 bg bg2">
+                        <div class="banner-info">
+                            <div class="container">
+                                <div class="banner-info-bg">
+                                    <h5></h5>
+                                    <p class="mt-4 pr-lg-4"></p>
+                                    <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="{% url 'calculator' %}"> Calculator</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </div>
+            <div class="item">
+                <li>
+                    <div class="slider-info banner-view banner-top2 bg bg2">
+                        <div class="banner-info">
+                            <div class="container">
+                                <div class="banner-info-bg">
+                                    <h5></h5>
+                                    <p class="mt-4 pr-lg-4"></p>
+                                    <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="{% url 'calculator' %}"> Calculator</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="waveWrapper waveAnimation">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+            <path d="M-5.07,73.52 C149.99,150.00 299.66,-102.13 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none;"></path>
+        </svg>
+    </div>
+</section>
+{% block content %}
+
+{% endblock %}
+<!-- /main-slider -->
+<section class="w3l-courses">
+    <div class="blog pb-5" id="courses">
+        <div class="container py-lg-5 py-md-4 py-2">
+            <h3 class="title-big text-center mb-sm-5 mb-4"><span>Statistics</span></h3>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 item">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative">
+                            <a class="zoom d-block">
+                                <img class="card-img-bottom d-block" src="{% static 'assets/images/c1.jpg' %}"
+                                    alt="Card image cap">
+                            </a>
+                        </div>
+                        <div class="card-body course-details">
+                            <h3>MEAN</h3>
+                            <a  class="course-desc">The arithmetic mean of a given data is the sum of all observations divided by the
+                                number of observations.</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 item mt-md-0 mt-5">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative">
+                            <a href="#course-single" class="zoom d-block">
+                                <img class="card-img-bottom d-block" src="{% static 'assets/images/c5.jpg' %}"
+                                    alt="Card image cap">
+                            </a>
+                        </div>
+                        <div class="card-body course-details">
+                            <h3>MEDIAN</h3>
+                            <a  class="course-desc">The value of the middlemost observation, obtained after arranging the
+                                data in ascending order, is called the median of the data.</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 item mt-lg-0 mt-5">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative">
+                            <a href="#course-single" class="zoom d-block">
+                                <img class="card-img-bottom d-block" src="{% static 'assets/images/c6.jpg' %}"
+                                    alt="Card image cap">
+                            </a>
+                        </div>
+                        <div class="card-body course-details">
+                            <h3>MODE</h3>
+                            <a  class="course-desc">The value which appears most often in the given data i.e. the observation
+                                with the highest frequency is called a mode of data.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  <section class="w3l-copyright text-center">
+    <div class="container">
+      <p> Thank you</p>
+    </div>
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+      &#10548;
+    </button>
+    <script>
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction()
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("movetop").style.display = "block";
+        } else {
+          document.getElementById("movetop").style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+    <!-- /move top -->
+  </section>
+  <!-- //copyright -->
+</section>
+<!-- //footer -->
+
+<!-- Template JavaScript -->
+<script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+
+<script src="{% static 'assets/js/theme-change.js' %}"></script>
+
+<!-- stats number counter-->
+<script src="{% static 'assets/js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.countup.js' %}"></script>
+<script>
+  $('.counter').countUp();
+</script>
+<!-- //stats number counter -->
+
+<script src="{% static 'assets/js/owl.carousel.js' %}"></script>
+<!-- script for banner slider-->
+<script>
+  $(document).ready(function () {
+    $('.owl-one').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,
+      dots: false,
+      responsiveClass: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplaySpeed: 1000,
+      autoplayHoverPause: false,
+      responsive: {
+        0: {
+          items: 1
+        },
+        480: {
+          items: 1
+        },
+        667: {
+          items: 1
+        },
+        1000: {
+          items: 1,
+          nav: true
+        }
+      }
+    })
+  })
+</script>
+<!-- //script -->
+
+<!-- script for tesimonials carousel slider -->
+<script>
+  $(document).ready(function () {
+      $("#owl-demo1").owlCarousel({
+          loop: true,
+          margin: 20,
+          nav: false,
+          responsiveClass: true,
+          responsive: {
+              0: {
+                  items: 1,
+                  nav: false
+              },
+              768: {
+                  items: 2,
+                  nav: false
+              },
+              1000: {
+                  items: 3,
+                  nav: false,
+                  loop: false
+              }
+          }
+      })
+  })
+</script>
+<!-- //script for tesimonials carousel slider -->
+
+<!-- disable body scroll which navbar is in active -->
+<script>
+  $(function () {
+    $('.navbar-toggler').click(function () {
+      $('body').toggleClass('noscroll');
+    })
+  });
+</script>
+<!-- disable body scroll which navbar is in active -->
+
+<!--/MENU-JS-->
+<script>
+  $(window).on("scroll", function () {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 80) {
+      $("#site-header").addClass("nav-fixed");
+    } else {
+      $("#site-header").removeClass("nav-fixed");
+    }
+  });
+
+  //Main navigation Active Class Add Remove
+  $(".navbar-toggler").on("click", function () {
+    $("header").toggleClass("active");
+  });
+  $(document).on("ready", function () {
+    if ($(window).width() > 991) {
+      $("header").removeClass("active");
+    }
+    $(window).on("resize", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+    });
+  });
+</script>
+<!--//MENU-JS-->
+
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+
+</body>
+
+</html>

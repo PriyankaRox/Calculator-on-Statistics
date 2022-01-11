@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+<!-- //about breadcrumb -->
+<section class="w3l-courses">
+    <div class="blog pb-5" id="courses">
+        <div class="container py-lg-5 py-md-4 py-2">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 item">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative">
+                            <a href="#course-single" class="zoom d-block">
+                                <img class="card-img-bottom d-block" src="{% static 'assets/images/c1.jpg' %}"
+                                    alt="Card image cap">
+                            </a>
+                        </div>
+                        <div class="card-body course-details">
+                            <div class="price-review d-flex justify-content-between mb-1align-items-center">
+                                <p>Result</p>
+
+                            </div>
+                            <a class="course-desc">MEAN {{ result }}</a>
+                            <a class="course-desc">MEDIAN {{ med }}</a>
+                            <a class="course-desc">MODE {{ mod }}</a>
+                            <div class="course-meta mt-4">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
